@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=Edge"/> 	
+	<title>Center Guide</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />	
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+<div id="left-menu">
+	<div class="menu-body">
+		<ul class="ul-menu">			
+			<li>
+				<a href="guide.html">
+					Guide
+				</a>
+			</li>			
+			<li>
+				<a href="map.html">
+					Map
+				</a>
+			</li>
+			<li>
+				<a href="gallery.html">
+					Gallery
+				</a>
+			</li>
+			<li>
+				<a href="history.html">
+					History
+				</a>
+			</li>
+			<li>
+				<a href="about.html">
+					About Groove
+				</a>
+			</li>						
+			<li>
+				<a href="project.html">
+					About App
+				</a>
+			</li>
+			<li>
+				<a href="help.html">Help </a>
+			</li>			
+		</ul>
+	</div>
+</div>
+
+<div id="main">
+	<div class="title">		
+		Center Guide	
+		<button type="button" class="navbar-toggle" id="show-menu">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>	 
+	</div>
+	<div class="about-bg" style='background-image: url(img/about.jpg);'></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="text-site center">List Of Centers</h3>
+				<div class="divider">
+					<i class="fa fa-bookmark"></i>
+				</div>				
+			</div>
+		</div>
+		<center>
+			<a href="#" class="btn btn-view btn-info" style='margin-top: 10px; margin-bottom: 10px;'>
+				View Centers
+			</a>
+		</center>
+		<ul class="t-list" style='display: none;'>
+			<li>
+				<a href="#" id="load-yemo">Yemoo house</a>
+			</li>
+			<li>
+				<a href="#" id="load-tot">Flying Tortoise</a>
+			</li>
+			<li>
+				<a href="#" id="load-sea">See goddess</a>
+			</li>
+			<li>
+				<a href="#" id="load-yard">The Yard</a>
+			</li>
+			<li>
+				<a href="#" id="load-pav">Pavilion</a>
+			</li>
+			<li>
+				<a href="#" id="load-con">Concoction </a>
+			</li>
+			<li>
+				<a href="#" id="load-bridge">The Suspension Bridge</a>
+			</li>
+			<li>
+				<a id="load-mapo" href="#">Iya Mapo</a>
+			</li>
+			<li>
+				<a href="#" id="load-ela">Ela</a>
+			</li>
+			<li>
+				<a class="last-menu" href="#">Chicken Pox Lord</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="foot">
+		&copy; The Federal Polytechnic Ede
+	</div>
+</div>
+<a class="hide show-modal" data-toggle="modal" href='#modal-id'>Trigger modal</a>
+<div class="modal fade" id="modal-id">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#load-yemo").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">Yemoo House</h3>';
+			data += '<p>Yemoo is one of the wife of the deities  in the groove, the Virgin girl who carries the calabash on the festival day will pass inside the Yemoo house and follow the Arugba route to the main shrine , she\'s only one that passes through this route on the festival day and she must not fall and every other person can pass through there on a normal day</p>';
+			data += '<h4>Direction</h4><p>You can use either Route A or Route B depending on your location</p><center><img src="img/maps/A.jpg" class="img-responsive"><br><img src="img/maps/B.jpg" class="img-responsive"></center>';
+
+			$(".modal-title").html("Yemoo House");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-tot").click(function(event) {
+			event.preventDefault();			
+			var data = '<h3 class="text-site">Flying Tortoise</h3>';
+			data += '<p>This serves as a security gate in the olden days in the groove there is incantation they cast whenever they wants people to enter in to the gate unless no one can enter</p>';
+			data += '<h4>Direction</h4><center><img src="img/maps/B.jpg" class="img-responsive"></center>';
+
+			$(".modal-title").html("Flying Tortoise");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-sea").click(function(event) {
+			event.preventDefault();			
+			var data = '<h3 class="text-site">See goddess</h3>';
+			data += '<p>It statue is surrounded by children which indicates the sea-goddess is a mother of fertility barren comes here to pray during the festival and if she believes she will be blessed with children</p>';
+			data += '<h4>Direction</h4><center><img src="img/maps/B.jpg" class="img-responsive"></center>';
+
+			$(".modal-title").html("Flying Tortoise");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-yard").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">The Yard</h3>';
+			data += '<p>This consist of many different art works and it has a route that leads to the Yemoo house which is the Arugba route from the Yard one can gets to Ojubo Osun,  Ifa groove and the suspension bridge. The Ojubo Osun is made up of the Pavillion and the condition water. At the entrance of the yard to the Ojubo Osun we have a statue of the devil and also of that of a woman blessed with a child showing appreciation to Osun.</p>';
+			data += '<h4>Direction</h4><p>The Yard route Can be seen on the Route A Below Along Arugba Route</p><center><img src="img/maps/A.jpg" class="img-responsive"></center>';
+
+			$(".modal-title").html("The Yard");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-pav").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">Pavilion</h3>';
+			data += '<p>This is where the dignitaries sit on the festival day.</p>';
+			data += '<h4>Direction</h4><p>Pavilion can be reached by connecting map B with that of C</p><center><img src="img/maps/B.jpg" class="img-responsive"><br><img src="img/maps/C.jpg" class="img-responsive"></center>';
+
+			$(".modal-title").html("Pavilion");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-con").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">Concoction</h3>';
+			data += '<p>This is a river which is called concoction, a lot of people sits at every angle of the concoction on the festival day and ask for whatever they want with their believe in it.<br>Ifa groove : this is where the IFA priests hold their meetings each time they want to meet, they move on with their backs and don\'t pass out from this route after finishing the meeting, they have a bird called Vulture as their messenger.</p>';
+			data += '<h4>Direction</h4><p>Concoction can be reached by connecting map B with that of C</p><center><img src="img/maps/B.jpg" class="img-responsive"><br><img src="img/maps/C.jpg" class="img-responsive"></center>';
+
+			$(".modal-title").html("Concoction");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-bridge").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">The Suspension Bridge</h3>';
+			data += '<p>This bridge was constructed in 1935 by colonial masters to help the people Osogbo to gets to their farm settlements easily especially during the rainy season that the water fills the road path which makes people to be unable to reach their farm settlements.</p>';
+			data += '<h4>Direction</h4><p>The Suspension Bridge can be reached ither by connecting map B with that of C or From Map B to D</p><center><img src="img/maps/B.jpg" class="img-responsive"><br><img src="img/maps/C.jpg" class="img-responsive"><br><img src="img/maps/D.jpg" class="img-responsive"></center>';
+
+			$(".modal-title").html("The Suspension Bridge");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-mapo").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">Iya Mapo</h3>';
+			data += '<p>This is believe to be the tallest woman on earth, she has three hands, one for good, one for bad and the last one for regretion.</p>';
+			data += '<h4>Direction</h4><p>The Route of Iya Mapo can be seen in Route E below.</p><center><img src="img/maps/E.jpg" class="img-responsive"></center>';
+			$(".modal-title").html("Iya Mapo");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$("#load-ela").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">Ela</h3>';
+			data += '<p>This serves as the intermediary between us and God, he deliver any message  we want to pass to God to him</p>';
+			data += '<h4>Direction</h4><p>The Route to Ela can be seen in Route E below.</p><center><img src="img/maps/E.jpg" class="img-responsive"></center>';
+			$(".modal-title").html("Ela");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$(".last-menu").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();			
+			var data = '<h3 class="text-site">Chicken Pox Lord</h3>';
+			data += '<p>This serves as the intermediary between us and God, he deliver any message  we want to pass to God to him</p>';
+			data += '<h4>Direction</h4><p>The Direction to Chiken Pox Lord can be is shown in Route E below.</p><center><img src="img/maps/E.jpg" class="img-responsive"></center>';
+			$(".modal-title").html("Chiken Pox Lord");
+			$(".modal-body").html(data);
+			$(".show-modal").click();			
+		});
+
+		$(".btn-view").click(function(event) {
+			/* Act on the event */
+			event.preventDefault();
+			$(this).hide();
+			$(".t-list").slideDown();
+		});
+
+	});
+</script>
+</body>
+</html>

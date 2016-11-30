@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=Edge"/> 	
+	<title>Gallery</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />	
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+<div id="left-menu">
+	<div class="menu-body">
+		<ul class="ul-menu">			
+			<li>
+				<a href="guide.html">
+					Guide
+				</a>
+			</li>			
+			<li>
+				<a href="map.html">
+					Map
+				</a>
+			</li>
+			<li>
+				<a href="gallery.html">
+					Gallery
+				</a>
+			</li>
+			<li>
+				<a href="history.html">
+					History
+				</a>
+			</li>
+			<li>
+				<a href="about.html">
+					About Groove
+				</a>
+			</li>						
+			<li>
+				<a href="project.html">
+					About App
+				</a>
+			</li>
+			<li>
+				<a href="help.html">Help </a>
+			</li>			
+		</ul>
+	</div>
+</div>
+<div id="main">
+	<div class="title">
+		Gallery
+		<button type="button" class="navbar-toggle" id="show-menu">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>	 
+	</div>
+	<div class="about-bg" style='background-image: url(img/about.jpg);'></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="text-site center">Gallery</h3>
+				<div class="divider">
+					<i class="fa fa-bookmark"></i>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 gallery">
+				<ul class="ul-gallery">
+					<li>
+						<img src="img/7.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/8.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/about.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/18.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/41.jpg" class="img-responsive">						
+					</li>
+					<li>
+						<img src="img/32.jpg" class="img-responsive">
+					</li>
+					<li>						
+						<img src="img/31.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/33.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/34.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/38.jpg" class="img-responsive">
+					</li>
+					<li>						
+						<img src="img/9.jpg" class="img-responsive">
+					</li>
+					<li>						
+						<img src="img/40.jpg" class="img-responsive">
+					</li>
+					<li>						
+						<img src="img/20.jpg" class="img-responsive">
+					</li>
+					<li>
+						<img src="img/map.jpg" class="img-responsive">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="foot">
+		&copy; The Federal Polytechnic Ede
+	</div>
+</div>
+
+<a class="hide my-modal" style='display: none;' data-toggle="modal" href='#modal-id'>&nbsp;</a>
+<div class="modal fade" id="modal-id">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">View Image</h4>
+			</div>
+			<div class="modal-body">
+				<img src="" id="my-img" class="img-responsive">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">	
+	$(document).ready(function() {
+		$(".ul-gallery li img").click(function(event) {
+			/* Act on the event */
+			var src = $(this).attr('src');
+			$("#my-img").attr('src', src);
+			$(".my-modal").click();
+		});
+	});
+</script>
+</body>
+</html>

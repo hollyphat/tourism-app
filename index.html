@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=Edge"/> 	
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />	
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body style='background-color: #349856;'>
+<div id="app">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				
+				<div class="center app-name">
+					A Mobile Tourist Guide
+					<span>(A case study of Osun State Tourism Borad, Osogbo)</span>
+				</div>
+
+				<div align="center">
+					<img src="img/icon.jpg" class="img-circle img-responsive">
+				</div>
+
+
+				<div id="home-foot">
+					<center>&copy; The Federal Polytechnic Ede</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var visited = sessionStorage.getItem("here");
+		if(visited == "yes"){
+			window.location = "guide.html";
+		}else{
+			sessionStorage.setItem("here","yes");
+			setTimeout(function(){
+				window.location = "guide.html";
+			},5000);
+		}
+	});
+</script>
+</body>
+</html>
